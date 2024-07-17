@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    font-family: Arial;
+    border: border-box;
+
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* Set a consistent height for all buttons */
+    text-align: center;
+    width: 150 px;
+}
+
+.btn-custom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.first-right-div {
+    height: 5rem; 
+    text-align: center;/* Correct the height here */
+    margin-bottom: 40px;
+   
+}
+
+.hidden-right-div {
+    margin-bottom: 40px;
+}
+.second-right-div {
+    margin-top:5 rem;
+    background-color: #fafafae9;
+}
+.third-right-div {
+    margin-bottom:40px;
+    
+}
+.offcanvas-body .offside-list span a.OF-one {
+    text-decoration: none !important;
+}
+
+.offcanvas-body ul {
+    list-style: none;
+}
+.divider {
+    border-bottom: 1px solid #000;
+    margin-top: 5px; 
+}
+.offcanvas-body{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.offcanvas-body{
+    margin:  1rem 0;
+}
+.devider-offcanvas{
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+}
+ .OF-one{
+    display: block;
+    margin:1rem 0;
+
+}
+.sticky-bar{
+
+position: fixed;
+    
+    height: 100%;
+    width: 20 px;
+    
+text-align: left;
+
+
+}
+.forth-right-div  li a{
+
+    text-decoration: none  
+}
+.third-right-div  li a{
+
+    text-decoration: none  
+}
+.forth-right-div li a:hover{
+    color: red; 
+    text-decoration: underline;
+}
+.third-right-div li a:hover{
+    color: red; 
+    text-decoration: underline;
+}
+.first-right p a{
+    text-decoration: none ;  
+}
+.first-right p a:hover{
+    color: red; 
+    text-decoration: underline;  
+}
+
+.hidden-right-div {
+    display: none;
+    transition: all 2s ease-in-out;
+}
+
+.first-right:target{
+    
+    display: block;
+}
+
+        container {
+            display: flex;
+            position: relative; /* Add relative positioning */
+        }
+
+        .main-div {
+            flex: 1;
+            display: flex;
+        }
+
+        .sticky-bar {
+            position: sticky;
+            top: 0;
+            right: 0; /* Position at top right corner */
+            width: 50px; /* Adjust width as needed */
+            height: 100vh;
+            overflow-y: auto; /* Add scroll if needed */
+            background-color: #f0f0f0; /* Sample background color */
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .main-body {
+            flex: 1;
+            padding: 20px;
+        }
+       .offcanvas .btn-left  .fa-solid{
+            width: 1.6 rem;
+            height: 2  rem;
+            padding: .2rem 0;
+            box-sizing: border-box;
+            vertical-align: top;
+            top:0;
+
+        }
+
+
+        .div-toggle{
+
+            section{
+                background-color: #fff;
+                label{
+                    border-bottom: 1px solid #416378;
+                background-color: #174a69;
+                cursor: pointer;
+                display: block;
+                padding: 15px 20px;
+                margin:0;
+                color:#fff;
+                position: relative;
+                font-size:10px;
+                & ::after{         /*for +*/
+                    content:"\271B";
+                    position: absolute;
+                    right: 20px;
+                    top:50px;
+                    transform:translateY(-50%) ;
+                    color:#fff;
+                    opacity:0.5;
+                    font-weight: 100;
+                    font-size: 16px;
+                }
+
+                }
+                hidden-right-div{ 
+                    color:#666;
+                    max-height: 0;
+                    visibility: 0;
+                    overflow: hidden;
+                    padding :0 20px;
+                    *{
+                        opacity: 0;
+
+                    }
+                }
+                input{
+                    display: none;
+                    &:checked + label + .hidden-right-div{
+                        max-height: 100vh;
+                        visibility: visible;
+                        opacity: 1;
+                        padding: 20px;
+                        *{
+                            opacity: 1;
+                        }
+
+                    }
+                    &:checked + label ::after{
+                        content:"\268A";
+
+
+                    }
+
+                }
+                
+            }
+        }
+
